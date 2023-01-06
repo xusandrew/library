@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>My Library</title>
-  </head>
-  <body>
-    <h1>My Library</h1>
-    <div id="library"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>My Library</title>
+    </head>
+    <body>
+        <h1>My Library</h1>
+        <button class="add_new"></button>
 
-    <script src="index.js"></script>
-  </body>
+        <div id="library"></div>
+
+        <div id="form">
+            <form action="" method="">
+                <h3>Add a new book</h3>
+
+                <label for="book_name">Name:</label>
+                <input type="text" name="book_name" id="book_name" required />
+
+                <label for="book_author">Author:</label>
+                <input
+                    type="text"
+                    name="book_author"
+                    id="book_author"
+                    required
+                />
+
+                <label for="book_pages">Pages:</label>
+                <input
+                    type="number"
+                    name="book_pages"
+                    id="book_pages"
+                    required
+                />
+
+                <label for="book_read">Read?</label>
+                <input
+                    type="checkbox"
+                    name="book_read"
+                    id="book_read"
+                    required
+                />
+            </form>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
 </html>
