@@ -6,3 +6,13 @@ class Book {
     this.read = read
   }
 }
+
+class Library {
+  constructor() {
+    this.books = []
+  }
+
+  addBook(Book) {
+    this.books.push(Book)
+  }
+}
