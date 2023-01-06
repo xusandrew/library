@@ -14,9 +14,16 @@ body {
 }
 
 h1 {
-  font-size: clamp(30px, 5vw, 50px);
+  font-size: clamp(30px, 7vw, 50px);
+  padding: 30px;
 }
 
 #library {
+  justify-items: center;
+  padding: 3rem;
+  width: 100vw;
   display: grid;
+  gap: 30px;
+
+  grid-template-columns: repeat(auto-fit, 200px);
 }
