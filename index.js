@@ -17,12 +17,16 @@ class Library {
   }
 
   displayBooks() {
-    for (var book in books) {
+    const container = document.getElementById("library")
+
+    this.books.forEach((book, i) => {
+      console.log(book)
+
       let card = document.createElement("div")
 
-      let title = document.createElement("h2")
-      title.appendChild(document.createTextNode('"' + book.title + '"'))
-      card.appendChild(title)
+      let name = document.createElement("h2")
+      name.appendChild(document.createTextNode('"' + book.name + '"'))
+      card.appendChild(name)
 
       let author = document.createElement("p")
       author.appendChild(document.createTextNode(book.author))
@@ -39,6 +43,14 @@ class Library {
       let remove_button = document.createElement("button")
       remove_button.appendChild(document.createTextNode("Remove"))
       card.appendChild(remove_button)
-    }
+
+      container.appendChild(card)
+    })
   }
 }
+
+var myLibrary = new Library()
+
+myLibrary.addBook(new Book("book 1", "Me", 4, true))
+myLibrary.addBook(new Book("book 2", "You", 5, true))
+myLibrary.displayBooks()
