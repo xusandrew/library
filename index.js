@@ -39,7 +39,9 @@ class Library {
             card.appendChild(pages)
 
             let read_button = document.createElement("button")
-            read_button.appendChild(document.createTextNode("Read"))
+            read_button.appendChild(
+                document.createTextNode(book.read ? "Read" : "Not read")
+            )
             read_button.classList.add("read")
             card.appendChild(read_button)
 
@@ -56,7 +58,7 @@ class Library {
 var myLibrary = new Library()
 
 myLibrary.addBook(new Book("book 1", "Me", 4, true))
-myLibrary.addBook(new Book("book 2", "You", 5, true))
+myLibrary.addBook(new Book("book 2", "You", 5, false))
 myLibrary.addBook(new Book("book 3", "to", 7, true))
 myLibrary.addBook(new Book("book 4", "do", 1232, true))
 myLibrary.displayBooks()
