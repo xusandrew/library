@@ -55,6 +55,17 @@ class Library {
     }
 }
 
+const open_form = () => {
+    document.getElementById("form_container").style.display = "flex"
+}
+
+const close_form = () => {
+    document.getElementById("form_container").style.display = "none"
+}
+
+const open_button = document.getElementById("add_new")
+open_button.addEventListener("click", open_form)
+
 var myLibrary = new Library()
 
 myLibrary.addBook(new Book("book 1", "Me", 4, true))
